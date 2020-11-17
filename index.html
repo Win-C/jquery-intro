@@ -79,8 +79,24 @@
   });
   $("article img").attr("class", "image-center");
   $("article p:last-of-type").remove();
-  let randomVariable = Math.floor(Math.random() * 101);
-  $("#title").css("font-size", randomVariable);
+  // let randomVariable = Math.floor(Math.random() * 101);
+  // $("#title").css("font-size", randomVariable);
+  $('ol').append('<li>');
+  $('ol li:last-of-type').text('that was a pain in the ass. winnie\'s fault')
+  
+  $('aside').empty().text('we must apologize for the presence of a stupid list that forced winnie and kellen to spend too much of their lives figuring out a stupid problem. much like this paragraph.');
+
+  $('.form-control').on('keyup blur change', update);
+
+  function update(e) {
+    let red = $('.form-control').eq(0).val()
+    let green = $('.form-control').eq(1).val()
+    let blue = $('.form-control').eq(2).val()
+    $("body").css("background-color", "rgb(" + red + "," + green + "," + blue + ")");
+  }
+  
+
+
 </script>
 </body>
 
